@@ -1,0 +1,6 @@
+@Bind9Config.Api.Host_HostAddress = http://localhost:5075
+
+GET {{Bind9Config.Api.Host_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

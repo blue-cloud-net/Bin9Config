@@ -1,0 +1,89 @@
+<Project>
+	<PropertyGroup>
+		<!--项目信息-->
+		<Version>1.0.10001</Version>
+		<Authors>shl</Authors>
+		<Product>Bind9Config</Product>
+		<Copyright>© 2023-present shl Co.,Ltd.</Copyright>
+		<RepositoryUrl></RepositoryUrl>
+
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<!--<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>logo.png</PackageIcon>-->
+		<PackageOutputPath>$(SolutionDir).nupkgs</PackageOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+	</PropertyGroup>
+
+	<!--<ItemGroup>
+		<None Include="$(SolutionDir)\doc\logo.png" Link="logo.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="$(SolutionDir)\README.md" Link="README.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>-->
+
+	<PropertyGroup>
+
+		<!-- All Microsoft AspNetCore packages -->
+		<MicrosoftAspNetCorePackageVersion>7.0.0</MicrosoftAspNetCorePackageVersion>
+
+		<!-- All Microsoft EntityFrameworkCore packages -->
+		<MicrosoftEntityFrameworkCorePackageVersion>7.0.1</MicrosoftEntityFrameworkCorePackageVersion>
+
+		<!-- All Microsoft packages -->
+		<MicrosoftPackageVersion>7.0.0</MicrosoftPackageVersion>
+
+		<!-- Microsoft.NET.Test.Sdk https://www.nuget.org/packages/Microsoft.NET.Test.Sdk -->
+		<MicrosoftNETTestSdkPackageVersion>17.8.0</MicrosoftNETTestSdkPackageVersion>
+
+		<!-- NUnit https://www.nuget.org/packages/NUnit -->
+		<NUnitPackageVersion>4.0.1</NUnitPackageVersion>
+
+		<!-- NUnit3TestAdapter https://www.nuget.org/packages/NUnit3TestAdapter -->
+		<NUnit3TestAdapterPackageVersion>4.5.0</NUnit3TestAdapterPackageVersion>
+
+		<!-- NUnit.Analyzers https://www.nuget.org/packages/NUnit.Analyzers -->
+		<NUnitAnalyzersPackageVersion>3.10.0</NUnitAnalyzersPackageVersion>
+
+		<!-- NUnit.Analyzers https://www.nuget.org/packages/coverlet.collector -->
+		<coverletcollectorPackageVersion>6.0.0</coverletcollectorPackageVersion>
+
+		<IsTestProject Condition="$(MSBuildProjectName.Contains('Tests')) or ($(MSBuildProjectName.EndsWith('.UnitTests')) or $(MSBuildProjectName.EndsWith('.Test.Base')))">true</IsTestProject>
+
+	</PropertyGroup>
+
+	<!--生成xml文档-->
+	<PropertyGroup Condition="'$(IsTestProject)' != 'true'">
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<!--忽略部分警告-->
+	<PropertyGroup>
+		<NoWarn>1587,</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(IsTestProject)' == 'true'">
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkPackageVersion)" />
+		<PackageReference Include="NUnit" Version="$(NUnitPackageVersion)" />
+		<PackageReference Include="NUnit3TestAdapter" Version="$(NUnit3TestAdapterPackageVersion)" />
+		<PackageReference Include="NUnit.Analyzers" Version="$(NUnitAnalyzersPackageVersion)" />
+		<PackageReference Include="coverlet.collector" Version="$(coverletcollectorPackageVersion)">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
