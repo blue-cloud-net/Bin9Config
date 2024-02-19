@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0810F5DE-573D-4D6C-809C-AB6811B8A016}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bind9Config.Manager.Core.Shared", "src\Bind9Config.Manager\Bind9Config.Manager.Core.Shared\Bind9Config.Manager.Core.Shared.csproj", "{5B42C94A-6347-4360-BD31-2F0C34C0E0F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{6CF74317-6F6A-4E3C-BD84-B44AE4807ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CF74317-6F6A-4E3C-BD84-B44AE4807ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CF74317-6F6A-4E3C-BD84-B44AE4807ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B42C94A-6347-4360-BD31-2F0C34C0E0F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B42C94A-6347-4360-BD31-2F0C34C0E0F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B42C94A-6347-4360-BD31-2F0C34C0E0F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B42C94A-6347-4360-BD31-2F0C34C0E0F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{00F7BB24-0FEF-4E9A-9630-87D701995547} = {B3691924-4F1D-417F-91F5-F04685B7A8AF}
 		{53817F50-F8F9-406D-BB61-2110B387F7EF} = {B3691924-4F1D-417F-91F5-F04685B7A8AF}
 		{6CF74317-6F6A-4E3C-BD84-B44AE4807ACC} = {B3691924-4F1D-417F-91F5-F04685B7A8AF}
+		{5B42C94A-6347-4360-BD31-2F0C34C0E0F8} = {B3691924-4F1D-417F-91F5-F04685B7A8AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9C38216-855A-4492-9A1F-C2F0B91A59DE}
