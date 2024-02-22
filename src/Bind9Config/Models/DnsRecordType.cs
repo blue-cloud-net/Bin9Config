@@ -38,6 +38,24 @@ public enum DnsRecordType
     CName = 5,
 
     /// <summary>
+    ///   <para>Domain name pointer</para>
+    ///   <para>
+    ///     Defined in
+    ///     <a href="https://www.rfc-editor.org/rfc/rfc1035.html">RFC 1035</a>.
+    ///   </para>
+    /// </summary>
+    Ptr = 12,
+
+    /// <summary>
+    ///   <para>Mail exchange</para>
+    ///   <para>
+    ///     Defined in
+    ///     <a href="https://www.rfc-editor.org/rfc/rfc1035.html">RFC 1035</a>.
+    ///   </para>
+    /// </summary>
+    Mx = 15,
+
+    /// <summary>
     ///   <para>Text strings</para>
     ///   <para>
     ///     Defined in
@@ -54,4 +72,23 @@ public enum DnsRecordType
     ///   </para>
     /// </summary>
     Aaaa = 28,
+
+    /// <summary>
+    ///   <para>Server selector</para>
+    ///   <para>
+    ///     Defined in
+    ///     <a href="https://www.rfc-editor.org/rfc/rfc2782.html">RFC 2782</a>.
+    ///   </para>
+    /// </summary>
+    Srv = 33,
+
+    /// <summary>
+    ///   <para>Certification authority authorization</para>
+    ///   <para>
+    ///     Defined in
+    ///     <a href="https://www.rfc-editor.org/rfc/rfc6844.html">RFC 6844</a>.
+    ///   </para>
+    /// </summary>
+    // ReSharper disable once InconsistentNaming
+    CAA = 257,
 }
